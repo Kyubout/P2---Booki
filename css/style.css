@@ -1,6 +1,8 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
@@ -31,7 +33,6 @@ a {
 }
 
 .section-title {
-    margin: 0;
     font-size: 22px;
 }
 
@@ -58,6 +59,35 @@ a {
     color: var(--main-bg-color)
 }
 
+/************** Header ***********/
+header {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+}
+
+header img {
+    padding: 33px 0px;
+    width: 60px;
+}
+
+header .menu {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+}
+
+header a {
+    padding-top: 15px;
+    margin-left: 15px;
+}
+
+.menu a:hover {
+    border-top: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -74,6 +104,54 @@ a {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hebergements-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hebergements-cards .card {
+    display:flex;
+    flex-direction: column;
+    margin-top: 33px;
+    width: 235px;
+    height: 200px;
+}
+
+.hebergements-cards img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: 115px;
+}
+
+.hebergements-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin: 5px 0px;
+}
+
+.hebergements-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+.hebergements-cards .card-content {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hebergements .more {
+    padding-top: 33px;
 }
 
 /****** Populaires ***********/
@@ -113,14 +191,33 @@ a {
     margin-bottom: 4px;
 }
 
-.populaires-cards .card-subtitle {
-    margin: 0;
-}
-
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
 
+/************ Footer ***************/
+footer {
+    background-color: var(--main-bg-color);
+    box-sizing: border-box;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-box {
+    width: -webkit-fill-available; /* pour Chrome */
+    width: -moz-available; /* pour Mozilla */
+    display: flex;
+    flex-direction: column;
+}
+
+footer li {
+    padding: 5px
+}
+
+.footer-title {
+    padding: 5px;
+}
 
 
 
