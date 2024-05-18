@@ -65,7 +65,6 @@ a {
 header {
     display: flex;
     justify-content: space-between;
-    height: auto;
 }
 
 header img {
@@ -75,7 +74,6 @@ header img {
 
 header .menu {
     display: flex;
-    justify-content: space-between;
 }
 
 header a {
@@ -98,9 +96,17 @@ header a {
 }
 
 /********** Search ****************/
+.form-label {
+    display: flex;
+    border: 1px var(--main-bg-color) solid;
+    background-color: var(--main-bg-color);
+    border-radius: 15px 0px 0px 15px;
+    height: 50px;
+    padding: 0px 19px;
+}
+
 .fa-location-dot {
     color: black;
-    text-align: center;
 }
 
 label {
@@ -109,14 +115,11 @@ label {
     border: none;
 }
 
-.form-label {
+.form-text {
     display: flex;
-    justify-content: center;
-    border: 1px var(--main-bg-color) solid;
-    background-color: var(--main-bg-color);
-    border-radius: 15px 0px 0px 15px;
+    border-top: 1px var(--main-bg-color) solid;
+    border-bottom: 1px var(--main-bg-color) solid;
     height: 50px;
-    padding: 0px 20px;
 }
 
 #location {
@@ -132,23 +135,6 @@ label {
     opacity: 1;
 }
 
-.form-text {
-    display: flex;
-    align-items: center;
-    border-top: 1px var(--main-bg-color) solid;
-    border-bottom: 1px var(--main-bg-color) solid;
-    height: 50px;
-}
-
-.rechercher {
-    background-color: var(--main-color);
-    color: white;
-    font-size: 16px;
-    font-weight: 700;
-    border: none;
-    padding: 0px 20px;
-}
-
 .form-button {
     display: flex;
     align-items: center;
@@ -158,6 +144,40 @@ label {
     background-color: var(--main-color);
 }
 
+.rechercher {
+    background-color: var(--main-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    padding: 0px 15px;
+}
+
+.form-button-icon {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border: 1px var(--main-color) solid;
+    border-radius: 15px;
+    height: 50px;
+    width: 50px;
+    background-color: var(--main-color); 
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+    position: relative;
+    left: -15px;
+}
+
+.rechercher-icon {
+    background-color: var(--main-color);
+    font-size: 16px;
+    border: none;
+    padding: 0px 18px;
+}
+
+.fa-magnifying-glass {
+    color: white;
+}
+
 form {
     display: flex;
     align-items: center;
@@ -165,7 +185,6 @@ form {
 }
 
 /*************** Filters *********************/
-
 .info {
     display: flex;
     align-items: center;
@@ -188,31 +207,26 @@ form {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-}
-
-.filters-section h3 {
-    padding-right: 15px;
+    gap: 20px;
 }
 
 .filters {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .filter-button {
     display: flex;
-    justify-content: center;
     align-items: center;
     border: 2px var(--filter-border-color) solid;
     border-radius: 25px ;
     height: 30px;
-    width: max-content;
     padding: 5px;
-    margin: 10px 15px 10px 0px;
 }
 
 .filter-button .fa-solid {
-    padding-left: 10px;
+    padding-left: 6px;
 }
 
 .filter-button p {
@@ -249,16 +263,21 @@ form {
 .hebergements-cards{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
+    gap: 30px;
+    padding-top: 33px;
+}
+
+.hebergements-cards a {
+    width: 30%;
 }
 
 .hebergements-cards .card {
     display:flex;
     flex-direction: column;
-    margin-top: 33px;
-    width: 235px;
-    height: 200px;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .hebergements-cards img {
@@ -269,24 +288,12 @@ form {
     object-position: center;
 }
 
-.hebergements-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
-}
-
-.hebergements-cards .card-subtitle {
-    margin: 5px 0px;
-}
-
-.hebergements-cards .card-rating {
-    margin-bottom: 5px;
-}
-
 .hebergements-cards .card-content {
-    padding-left: 10px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 5px;
 }
 
 .hebergements .more {
@@ -343,12 +350,16 @@ form {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 30px;
     margin: 30px 0px;
+}
+
+.activites-cards a {
+    width: 25%;
 }
 
 .activites-cards .card {
     padding: 0;
-    width: 290px;
     height: 100%;
     display: grid;
 }
@@ -418,26 +429,13 @@ footer li {
         width: 30%;
     }
 
-    /*.populaires-cards .card-title {
-        font-size: 14px;
-    }
-
-    .populaires-cards .card-subtitle {
-        font-size: 13px;
-    }*/
-
     .activites-cards img {
         height: 200px;
     }
-
-    .activites-cards .card {
-        width: 190px;
-    }
-
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
     /* ... */
 
     .main-container {
@@ -472,8 +470,16 @@ footer li {
         color: var(--main-color);
     }
 
+    .form-button {
+        display: none;
+    }
+
+    .form-button-icon {
+        display: flex;
+    }
+
     .filter-button {
-        width: 160px;
+        width: 137px;
     }
 
     .hebergements-and-populaires {
@@ -490,12 +496,14 @@ footer li {
 
     .populaires {
         margin-top: 0;
-        margin-bottom: 30px;
-        background-color: var(--main-bg-color);
     }
 
     .populaires-cards {
         flex-direction: column;
+    }
+
+    .populaires-cards .card {
+        margin-top: 15px;
     }
 
     .populaires-cards a {
@@ -504,34 +512,34 @@ footer li {
 
     .hebergements-cards {
         flex-direction: column;
+        gap: 15px;
+        padding-top: 15px;
     }
 
-    .hebergements-cards .card {
+    .hebergements-cards a {
         width: 100%;
     }
 
     .activites-cards {
         flex-direction: column;
-        margin: 20px 0;
+        margin: 20px 0px;
+        gap: 0px;
     }
 
     .activites-cards img {
         height: 140px;
     }
 
-    .activites-cards .card {
+    .activites-cards a {
         width: 100%;
-        margin: 10px 0;
+        margin: 10px 0px;
     }
 
     footer {
         flex-direction: column;
-        padding: 0;
     }
 
     .footer-box {
         padding: 15px;
     }
-
-
 }
