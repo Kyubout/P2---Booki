@@ -385,8 +385,7 @@ footer {
 }
 
 .footer-box {
-    width: -webkit-fill-available; /* pour Chrome */
-    width: -moz-available; /* pour Mozilla */
+    width: 34%;
     display: flex;
     flex-direction: column;
 }
@@ -431,6 +430,14 @@ footer li {
 
     .activites-cards img {
         height: 200px;
+    }
+}
+
+/* Medium devices (tablets, between 1025px and 1116px) 
+Pour une meilleure transition et un meilleur responsive*/
+@media (min-width: 1025px) and (max-width: 1116px) {
+    .hebergements-cards a {
+        width: 47%;
     }
 }
 
@@ -541,5 +548,6 @@ footer li {
 
     .footer-box {
         padding: 15px;
+        width: 100%;
     }
 }
