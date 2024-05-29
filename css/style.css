@@ -34,8 +34,13 @@ a {
     text-decoration: none;
 }
 
-.section-title, h1 {
+.section-title,
+h1 {
     font-size: 22px;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .card {
@@ -49,7 +54,8 @@ a {
     object-fit: cover;
 }
 
-.card-title, h3 {
+.card-title,
+h3 {
     font-size: 16px;
 }
 
@@ -79,10 +85,11 @@ header .menu {
 header a {
     padding-top: 15px;
     margin-left: 50px;
+    border-top: 2px solid transparent;
 }
 
 .menu a:hover {
-    border-top: 2px solid var(--main-color);
+    border-color: var(--main-color);
     color: var(--main-color);
 }
 
@@ -128,6 +135,7 @@ label {
     color: black;
     font-size: 16px;
     font-weight: bold;
+    width: 100%;
 }
 
 #location::placeholder {
@@ -161,7 +169,7 @@ label {
     border-radius: 15px;
     height: 50px;
     width: 50px;
-    background-color: var(--main-color); 
+    background-color: var(--main-color);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
     position: relative;
     left: -15px;
@@ -181,7 +189,7 @@ label {
 form {
     display: flex;
     align-items: center;
-    padding: 30px 0px 
+    padding: 30px 0px
 }
 
 /*************** Filters *********************/
@@ -210,6 +218,10 @@ form {
     gap: 20px;
 }
 
+.filters-section h2 {
+    font-size: 16px;
+}
+
 .filters {
     display: flex;
     flex-wrap: wrap;
@@ -220,7 +232,7 @@ form {
     display: flex;
     align-items: center;
     border: 2px var(--filter-border-color) solid;
-    border-radius: 25px ;
+    border-radius: 25px;
     height: 30px;
     padding: 5px;
 }
@@ -260,7 +272,7 @@ form {
     flex-direction: column;
 }
 
-.hebergements-cards{
+.hebergements-cards {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -270,11 +282,11 @@ form {
 }
 
 .hebergements-cards a {
-    width: 30%;
+    width: calc((100% - 60px) / 3);
 }
 
 .hebergements-cards .card {
-    display:flex;
+    display: flex;
     flex-direction: column;
     height: 100%;
     box-sizing: border-box;
@@ -293,6 +305,13 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 5px;
+    height: calc(100% - 135px);
+}
+
+.hebergements-cards .card-txt {
+    display: flex;
+    flex-direction: column;
     gap: 5px;
 }
 
@@ -433,14 +452,6 @@ footer li {
     }
 }
 
-/* Medium devices (tablets, between 1025px and 1116px) 
-Pour une meilleure transition et un meilleur responsive*/
-@media (min-width: 1025px) and (max-width: 1116px) {
-    .hebergements-cards a {
-        width: 47%;
-    }
-}
-
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
@@ -477,12 +488,25 @@ Pour une meilleure transition et un meilleur responsive*/
         color: var(--main-color);
     }
 
+
+    form {
+        justify-content: center;
+    }
+
+    .form-text{
+        width: 60%;
+    }
+
     .form-button {
         display: none;
     }
 
     .form-button-icon {
         display: flex;
+    }
+
+    .filters {
+        justify-content: center;
     }
 
     .filter-button {
