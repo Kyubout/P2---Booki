@@ -94,12 +94,16 @@ header a {
 }
 
 /********** Title **********/
+main > header {
+    flex-direction: column;
+}
+
 .title h1 {
     padding-top: 20px;
 }
 
 .title p {
-    padding: 10px 0px
+    padding-top: 10px;
 }
 
 /********** Search ****************/
@@ -168,18 +172,17 @@ label {
     border: 1px var(--main-color) solid;
     border-radius: 15px;
     height: 50px;
-    width: 50px;
     background-color: var(--main-color);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
     position: relative;
-    left: -15px;
+    margin-left: -15px;
 }
 
 .rechercher-icon {
     background-color: var(--main-color);
     font-size: 16px;
     border: none;
-    padding: 0px 18px;
+    width: 50px;
 }
 
 .fa-magnifying-glass {
@@ -189,7 +192,7 @@ label {
 form {
     display: flex;
     align-items: center;
-    padding: 30px 0px
+    padding: 30px 0px;
 }
 
 /*************** Filters *********************/
@@ -408,6 +411,7 @@ footer {
     width: 34%;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 footer li {
@@ -445,7 +449,7 @@ footer li {
     }
 
     .populaires-cards a {
-        width: 30%;
+        width: 32%;
     }
 
     .activites-cards img {
@@ -461,7 +465,7 @@ footer li {
         padding: 0;
     }
 
-    .intro {
+    main > header {
         padding: 0 30px;
     }
 
@@ -481,6 +485,7 @@ footer li {
         display: flex;
         justify-content: space-around;
         border-bottom: 2px solid var(--main-bg-color);
+        border-top: none;
     }
 
     .menu a:hover {
@@ -489,13 +494,12 @@ footer li {
         color: var(--main-color);
     }
 
-
     form {
         justify-content: center;
     }
 
     .form-text{
-        width: 60%;
+        width: 90%;
     }
 
     .form-button {
