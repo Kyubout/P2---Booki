@@ -365,6 +365,11 @@ form {
     padding: 30px;
 }
 
+.activites figcaption {
+    font-weight: bold;
+    padding: 20px;
+}
+
 .activites-cards {
     display: flex;
     flex-direction: row;
@@ -377,7 +382,7 @@ form {
     width: 25%;
 }
 
-.activites-cards .card {
+.activites-cards figure {
     padding: 0;
     height: 100%;
     display: grid;
@@ -389,10 +394,6 @@ form {
     width: 100%;
     height: 380px;
     object-position: center;
-}
-
-.activites-cards .card-title {
-    padding: 20px;
 }
 
 /************ Footer ***************/
