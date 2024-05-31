@@ -277,16 +277,15 @@ form {
 }
 
 .hebergements-cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
     gap: 30px;
     padding-top: 33px;
 }
 
 .hebergements-cards a {
-    width: calc((100% - 60px) / 3);
+    width: 100%;
 }
 
 .hebergements-cards .card {
@@ -558,6 +557,7 @@ footer li {
     }
 
     .hebergements-cards {
+        display: flex;
         flex-direction: column;
         gap: 15px;
         padding-top: 15px;
